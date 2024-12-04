@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <h1 class="header"><a href="/">Quality Associates International (NZ) Ltd.</a></h1>
+            <a href="/services/"><h2>Services</h2></a>
+            <a href="/aboutUs/"><h2>Our Team</h2></a>
+            <a href="/contactUs/"><h2>Contact Us</h2></a>
+        </header>
+        <div class="mainScrollable" style="background-color: #E7E7E7;">
+            <div class="scrollableItem">
+                <h3>Contact Us Today!</h3>
+                <p>Ready to take your business to the next level? Contact QAI today to schedule a consultation.
+                 Let’s work together to optimize your operations, reduce losses, and maximize efficiency.
+                  Unlock your business potential with our expert consultancy services.</p>
+                  <form id="exampleForm" action="http://localhost:3000/send-email" method="post">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="Name" required placeholder="Name">
+                    </div>
+                    <div>
+                        <label for="companyName">Company Name:</label>
+                        <input type="text" id="companyName" name="companyName" required placeholder="Company Name">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Email">
+                    </div>
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" optional placeholder="Phone">
+                    </div>
+                    <div>
+                        <label for="region">Region:</label>
+                        <input type="text" id="region" name="region" required placeholder="Region">
+                    </div>
+                    <div>
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="6" optional placeholder="How can we help?"></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                
+            </div>
+            
+        </div>
+        <footer>
+            <footerTitle>Discover The Difference</footerTitle>
+            <footerBody>Join countless businesses who have experienced the transformative
+                 power of our consultancy services. Together, we can build a more efficient
+                  and productive future for your organization.
+                   Trust QAI to be your partner in success.</footerBody>
+            <p style="color: white;">&copy; 2024 Quality Associates International.</p>
+          </footer>
+    </main>
+    <script src ="/script.js"></script>
+      
+</body>
+</html>

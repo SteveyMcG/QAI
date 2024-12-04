@@ -1,0 +1,685 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+  font-family: "Roboto", "san-serif";
+  background-color: #fff;
+  color: #111;
+  text-align: center;
+  font-size: 18px;
+  margin: 0; /* Remove margins for mobile */
+  padding: 0; /* Remove padding for mobile */
+  display: flex;
+  flex-direction: column; /* Remove*/
+}
+
+/* Mobile (max-width: 768px) */
+
+
+  
+header {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  padding: 3.25em 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  overflow-wrap: normal;
+  border-bottom: 1px solid rgba(25, 34, 91, 0.5);
+  
+}
+h1{
+  height: 25%;
+  flex-shrink: 0;
+  padding-right: 5vw;
+  width:55%;
+  color: #000;
+  text-align: center;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.header{
+  position: relative;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -2px; /* Adjust this value as needed */
+  width: 0;
+  height: 0.05em;
+  background-color: #000;
+  transition: width 1s ease;
+  box-sizing: border-box;
+}
+
+.header:hover {
+  color: #000;
+}
+
+.header:hover::after {
+    width: calc(100%);
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+h2 {
+  color: #000;
+  text-align: center;
+  font-size: 1.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative; /* For pseudo-element positioning */
+  transition: text-shadow 0.3s ease;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust this value as needed */
+  width: 0;
+  height: 2px;
+  background-color: #8A0012CC;
+  transition: width 1s ease;
+}
+
+h2:hover {
+  color: #8A0012CC;
+  text-shadow: 0.5px 0.5px 0 #8A0012CC, -0.5px -0.5px 0 #8A0012CC, 0.5px -0.5px 0 #8A0012CC, -0.5px 0.5px 0 #8A0012CC;
+}
+
+h2:hover::after {
+    width: 100%;
+}
+
+h3{
+  color: #000;
+  text-align: center;
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+main {
+  margin: 0 0;
+}
+.imgHead{
+  width: 100%;
+  overflow: hidden;
+  height:85vh;
+  position: relative;
+}
+.imgHead img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keep the aspect ratio */
+}
+.imgHead p{
+  width: 50%;
+  height: auto;
+
+  position: absolute; /* Absolute positioning for centering */
+  top: 50%; /* Position 50% from the top of the parent container */
+  left: 50%; /* Position 50% from the left of the parent container */
+  transform: translate(-50%, -50%); /* Offset by 50% to center fully */
+
+  color: #FFF;
+  text-align: center;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.mainScrollable{
+  display: flex;
+  width: 100%;
+  padding: 6.25em 5vw ;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.mainScrollable hr{
+  width: 60%;
+  height: 2px;
+  background: rgba(25, 34, 91, 0.50);
+}
+.mainScrollable p{
+  color: #000;
+  text-align: center;
+  font-size: 1.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  width: 70%;
+  align-self:auto;
+}
+
+.scrollableItem{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2em;
+}
+h4{
+  color: #000;
+  text-align: center;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.services{
+  display: flex;
+  width:auto;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.875em;
+}
+.services div{
+  display: flex;
+  width: 27%;
+  height: auto;
+  padding: 1.2em 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875em;
+}
+.services divTop{
+  display: flex;
+  width: 27%;
+  padding: 1.2em 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.875em;
+  flex-shrink: 0;
+}
+.services divMid{
+  display: flex;
+  width: 27%;
+  margin-top: 5%;
+  padding: 1.2em 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.875em;
+  flex-shrink: 0;
+}
+.services divBot{
+  display: flex;
+  width: 27%;
+  margin-top: 10%;
+  padding: 1.2em 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.875em;
+  flex-shrink: 0;
+}
+
+.services imageContainer{
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.services img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keep the aspect ratio */
+}
+.services h{
+  color: #000;
+  text-align: center;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #FFF;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-self: stretch;
+}
+  
+.testimonialSection{
+  display: flex;
+  width: 80%;
+  max-width: 80vw;
+  padding: 0.7em 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875em;
+}
+.testimonials{
+  display: flex;
+  width: 70vw;
+  padding: 0.7em 3.2em;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7em;
+}
+.testimonial p{
+  color: #000;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.scrollableItem p{
+  align-self: stretch;
+  width:auto;
+  color: #000;
+  text-align: center;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contactButton {
+  display: flex;
+  padding: 1.875em 3.125em;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 20px;
+  border: 4px solid #000;
+  background: rgba(215, 220, 255, 0.50);
+  position: relative; /* For positioning the pseudo-element */
+  overflow: hidden; /* Ensure pseudo-elements don't overflow */
+  transition: 0.1s;
+}
+
+.contactButton p {
+  color: #000;
+  font-size: 1.875em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative; /* Allow ::after to position absolutely */
+  transition: text-shadow 0.3s ease;
+}
+
+.contactButton p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust this value as needed */
+  width: 0;
+  height: 2px;
+  background-color: #000; /* Same color as text */
+  transition: width 1s ease;
+}
+
+.contactButton:hover p {
+  text-shadow: 0.5px 0.5px 0 #000, 
+                -0.5px -0.5px 0 #000, 
+                0.5px -0.5px 0 #000, 
+                -0.5px 0.5px 0 #000;
+}
+
+.contactButton:hover p::after {
+  width: 100%; /* Expand the underline on hover */
+}
+
+  
+footer {
+  background: linear-gradient(90deg, #19225B 0%, #3548C1 20%, #19225B 40%, #3548C1 60%, #19225B 80%, #3548C1 100%);
+  display: flex;
+  width: 100%;
+  padding: 2.5em 13vw;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footerTitle {
+  color: #FFF;
+  text-align: center;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+footerBody {
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  width: 60%;
+}
+.process{
+  display: flex;
+  flex-direction: column;
+  width:75%;
+  height: auto;
+  flex:1;
+  padding: 0.7em 3.2em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.processText{
+  width: 70%;
+}
+.processHeader{
+  display: flex;
+  width: 70%;
+  align-items: center;
+  gap: 1.875em;
+}
+.processHeader h1{
+  all:initial;
+  font-family: "Roboto", "sans-serif";
+  color: #000;
+  text-align: left;
+  font-size: 6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  flex-shrink: 0;
+}
+.processHeader h4{
+  all:initial;
+  font-family: "Roboto", "sans-serif";
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  text-align: center;
+  font-size: 2.1em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.processHeader h3{
+  all:initial;
+  font-family: "Roboto", "sans-serif";
+  color: #6b6b6b;
+  text-align: center;
+  font-size: 1.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.process p{
+  font-size: 1.2em;
+  text-align: left;
+  width: auto;
+}
+
+ul{
+  all: inherit;
+  text-align: left;
+  list-style-position: inside;
+  font-size: 1.2em;
+  padding-left: 1em;
+  width:auto;
+}
+li{
+  text-align: left;
+  width:100%;
+  text-indent: -1.4em; /* Adjust negative indent to account for the bullet width */
+  padding-left: 1.5em;
+}
+.teamBio{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items:flex-start;
+  width: auto;
+}
+.teamBio div{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 55%;
+  gap: 1em;
+  
+  font-size: 0.9em;
+}
+.teamBio p{
+  width:fit-content;
+  text-align: left;
+  
+  font-size: 1.2em;
+}
+.teamBio ul{
+  gap:0;
+  padding: 0;
+  padding-left: 2em;
+  list-style-position: inside;
+  width: 100%;
+}
+.teamBio li{
+  width: 100%;
+}
+.teamBio div img{
+  max-width: 300px;
+  max-height: 300px;
+  width: 30%;
+  border: #19225B solid;
+  border-width: 1px;
+  border-radius: 20px;
+}
+
+hideableText {
+      width: 100%;
+      gap: 1em;
+      display: flex;
+      flex-direction: column; /* Hide initially */
+    }
+.textToggle {
+      display: none;
+    }
+
+
+
+  /* Tablets (min-width: 768px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+    header {
+      padding: 2.75em 0px;
+    }
+    h1{
+      width: 40%;
+      font-size: 2.2em;
+    }
+    .process{
+      width: 85%;
+    }
+    .processHeader{
+      width: 85%;
+    }
+    .teamBio div{
+      width: 75;
+    }
+    .teamBio div img{
+      width: 40%;
+    }
+    hideableText {
+      width: 100%;
+      gap: 1em;
+      display: none;
+      flex-direction: column; /* Hide initially */
+    }
+    
+     /* Adjust max-width as needed for mobile */
+     .textToggle {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px; /* Add padding for the pill-like appearance */
+      color: white; /* Button text color */
+      background-color: rgba(25, 34, 91,1); /* Button background color */
+      border: 2px solid rgba(25, 34, 91, 1); /* Button border color */
+      border-radius: 50px; /* Create the pill shape */
+      cursor: pointer;
+      font-size: 1em;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    }
+    
+    .textToggle:hover {
+      background-color: white; /* Change background on hover */
+      color: rgba(25, 34, 91, 1); /* Change text color on hover */
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    header { /* Stack header elements vertically */
+        padding: 1.6em 0; /* Reduce padding */
+        gap: 10px; /* Smaller gap between items */
+    }
+  
+    h1 {
+        width: 100%; /* Use the full width */
+        padding-right: 0; /* Remove padding */
+        font-size: 2em; /* Adjust font size for mobile */
+    }
+  
+    h2 {
+        font-size: 1.1em; /* Adjust font size */
+    }
+  
+    .mainScrollable {
+        padding: 1.6em 5vw ;
+        gap: 2.5em; /* Use viewport width for padding */
+    }
+    .mainScrollable p{
+      width: 100%;
+    }
+    .imgHead{
+      width: 100%;
+      overflow: hidden;
+      height:40vh;
+      position: relative;
+    }
+    .imgHead p {
+        width: 90vw; /* Take up nearly full viewport width */
+        font-size: 1.5em; /* Smaller font for mobile */
+    }
+    	.scrollableItem{
+        width:90vw;
+      }
+    .services div {
+        width: auto; /* Use full viewport width for services on mobile */
+        height: auto; /* Let the height adjust */
+    }
+    .services {
+      flex-direction: column;
+    }
+  
+    footer {
+        padding: 20px 5vw; /* Adjust footer padding for mobile */
+    }
+    footerBody {
+      display: none;
+    }
+    .services divTop{
+      width: auto;
+    }
+    .services divMid{
+      width: auto;
+      margin-top: 0;
+    }
+    .services divBot{
+      width: auto;
+      margin-top: 0;
+    }
+    .testimonials {
+      width: auto;
+      flex-direction: column;
+      padding: 0.8em 0vw ;
+    }
+    .process{
+      width:100%;
+      padding: 0.7em 1.5em;
+    }
+    .processHeader{
+      width: 90%;
+    }
+    .processHeader h4{
+      font-size: 1.8em
+    }
+    .processHeader h3{
+      font-size: 1em;
+    }
+    .processText{
+      width: 85%;
+    }
+    .teamBio div{
+      width: 85%;
+    }
+    .teamBio div img{
+      width: 50%;
+    }
+    hideableText {
+      width: 100%;
+      gap: 1em;
+      display: none;
+      flex-direction: column; /* Hide initially */
+    }
+    
+     /* Adjust max-width as needed for mobile */
+     .textToggle {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px; /* Add padding for the pill-like appearance */
+      color: white; /* Button text color */
+      background-color: rgba(25, 34, 91,1); /* Button background color */
+      border: 2px solid rgba(25, 34, 91, 1); /* Button border color */
+      border-radius: 50px; /* Create the pill shape */
+      cursor: pointer;
+      font-size: 1em;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    }
+    
+    .textToggle:hover {
+      background-color: white; /* Change background on hover */
+      color: rgba(25, 34, 91, 1); /* Change text color on hover */
+    }
+
+
+  }
+  
